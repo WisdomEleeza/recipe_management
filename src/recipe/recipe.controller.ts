@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  // HttpCode
 } from '@nestjs/common';
 import { RecipeService } from './recipe.service';
 import { CreateRecipeDto } from './dto/create-recipe.dto';
@@ -21,6 +22,7 @@ export class RecipeController {
   }
 
   @Get()
+  // @HttpCode(204)
   findAll() {
     return this.recipeService.findAll();
   }
